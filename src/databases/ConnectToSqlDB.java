@@ -23,11 +23,11 @@ public class ConnectToSqlDB {
     public static ResultSet resultSet = null;
 
     public static Properties loadProperties() throws IOException{
-        Properties prop = new Properties();
+        Properties sprop = new Properties();
         InputStream ism = new FileInputStream("src/secret.properties");
-        prop.load(ism);
+        sprop.load(ism);
         ism.close();
-        return prop;
+        return sprop;
     }
 
     public static Connection connectToSqlDatabase() throws IOException, SQLException, ClassNotFoundException {
